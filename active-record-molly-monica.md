@@ -43,7 +43,8 @@ Created database 'rolodex_test'
 
 # Retrieve all the items in the database.
 - 3.0.0 :012 > Person.all
-  Person Load (0.5ms)  SELECT "people".* FROM "people"
+output: 
+Person Load (0.5ms)  SELECT "people".* FROM "people"
  =>                                                           
 [#<Person:0x000000014710dd88                                  
   id: 1,                                                      
