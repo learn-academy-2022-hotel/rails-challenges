@@ -26,3 +26,24 @@ Add view:
     Add:
     <%= link_to 'Octavio', '/favorite_things_octavio' %>
     <%= link_to 'Torin', '/favorite_things_torin' %>
+
+params CHALLENGES
+Add route:
+    get '/cubed' => 'main#cubed' 
+    # http://localhost:3000/cubed?number=5
+    get '/cubed/:number' => 'main#cubed'
+Add method:
+    class MainController < ApplicationController
+        def team_members 
+            # render html: 'Torin'
+        end
+
+        def cubed
+            @number = params[:number]
+        end
+    end
+Add view file:
+    app/views/main/cubed.html.erb
+    Add content to cubed.html.erb file:
+    <h1> Cube my numbrrr : <%=@number%> </h1>
+    <h2> <%= @number.to_i**3 %> </h2>
